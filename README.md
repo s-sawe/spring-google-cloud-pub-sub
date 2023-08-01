@@ -1,5 +1,5 @@
 # Kisi Coding Challange
-By **Sharon Sawe : sharonsawe02@gmail.com** 
+By **Sharon Sawe** 
 
 * This application contains the Adapter and Atomic for the Google Publisher/Subscriber Messaging service
 * The adapter is found in the `MessageProducer.class` while the atomic can be found in the `MessageConsumer.class`
