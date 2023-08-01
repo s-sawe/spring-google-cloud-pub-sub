@@ -1,4 +1,4 @@
-package com.dev.kisicodingchallange;
+package com.dev.kisicodingchallange.gcp.publisher;
 
 
 import com.google.cloud.spring.pubsub.core.PubSubTemplate;
