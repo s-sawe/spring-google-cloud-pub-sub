@@ -8,7 +8,7 @@ import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ProducerServiceActuator {
+public class MessageProducer {
 
     @Bean
     @ServiceActivator(inputChannel = "outboundMsgChannel")

@@ -16,7 +16,6 @@ import org.springframework.messaging.MessageHandler;
 @Slf4j
 public class MessageConsumer { /*Listens for messages from Google Cloud Pub/Sub subscription*/
 
-
     @Bean
     public PubSubInboundChannelAdapter messageChannelAdapter(@Qualifier("pubsubInputChannel") MessageChannel inputChannel, PubSubTemplate pubSubTemplate){
 
@@ -28,11 +27,6 @@ public class MessageConsumer { /*Listens for messages from Google Cloud Pub/Sub 
     }
 
     @Bean
-    public MessageChannel pubsubInputChannel(){
-        return new DirectChannel();
-    }
-
-    @Bean
     @ServiceActivator(inputChannel = "pubsubInputChannel")
     public MessageHandler messageReceiver(){
         return message -> {
@@ -41,4 +35,12 @@ public class MessageConsumer { /*Listens for messages from Google Cloud Pub/Sub 
             originalMessage.ack();
         };
     }
+
+    @Bean
+    public MessageChannel pubsubInputChannel(){
+        return new DirectChannel();
+    }
+
+
+
 }
